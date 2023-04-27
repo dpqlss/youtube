@@ -9,20 +9,20 @@ const VideoCard = ({ video, type }) => {
 
   return (
     <li
-      className={isList ? "flex gap-1 m-2 " : ""}
+      className={isList ? "flex gap-1 ml-5 mb-3 " : ""}
       onClick={() => {
         navigate(`/videos/watch/${video.id}`, { state: { video } });
       }}
     >
       <img
-        className={isList ? "w-60 mr-2" : "w-full"}
+        className={isList ? "w-44 mr-2 rounded-xl" : "w-full rounded-xl"}
         src={thumbnails.medium.url}
         alt={title}
       />
       <div>
         <p className="my-2 font-semibold line-clamp-2">{title}</p>
         <p className="text-sm opacity-80">{channelTitle}</p>
-        <p className="text-sm opacity-80">{formateAgo(publishedAt)}</p>
+        <p className="mb-5 text-sm opacity-80">{formateAgo(publishedAt)}</p>
       </div>
     </li>
   );
