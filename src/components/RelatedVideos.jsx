@@ -23,7 +23,6 @@ const RelatedVideos = ({ id }) => {
           ))}
         </ul>
       )}
-      ;
     </>
   );
 };
